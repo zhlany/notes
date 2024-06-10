@@ -1,0 +1,66 @@
+ zadd key [NX|XX] [CH] [INCR] score member [score member ...]
+sadd set1 0 // 像set1中添加元素0
+smembers set1 // 返回set1中的所有元素
+scard set1 // 返回set的基数
+sismember set1 0 // 测试set1中是否包含元素0
+srandmember set1 // 随机返回一个元素
+sinter set1 set2 // 求交集
+sinterstore set3 set1 set2 // 保存交集到set3
+sunion set1 set2 // 求并集
+sdiff set1 set2 // 求差集
+
+
+zadd key [NX|XX] [CH] [INCR] score member [score member
+ zcard key
+ zscore key member
+ zrank key member
+ zrange key start stop [WITHSCORES]
+ zrange set1 0 -1 withscores
+ zrevrange key start stop [WITHSCORES]
+ zrem key member [member ...]
+ zincrby key increment member
+
+ hset key field value
+ hget key field
+hexists hash1 key1
+hlen hash1
+hkeys hash1 // 获取hash1的所有key
+ hvals hash1 // 获取hash1的所有value
+hmget hash1 key1 key2 // 获取元素
+ hgetall hash1 // 获取key/value
+hincrby hash1 key3 5 // 将key3的value增加15(仅限整数)
+hmset hash1 key4 value4 key5 value5 // 批量添加元素
+
+
+常见操作有lpush, rpush, lrange
+
+lpush key value [value ...]      //头部插入数据
+rpush key value [value ...]      //尾部插入数据
+ lrange key start stop      //列出编号start~stop的元素
+lindex key index      //根据index获取元素
+llen key      //lists长度
+ltrim key start stop      //截取,仅保留编号start~stop之间的元素
+lrange key start stop      //列出key的值
+lset key index value      //给1位置的元素赋值
+lrem key count value      //删除count个值为value的元素
+lpop key      //    移除并取第一个元素
+
+ exists key [key ...]           //查看key是否存在
+set key value [expiration EX seconds|PX milliseconds] [NX|XX]           //设置k,v
+get key           //获取k的值
+type key           //值类型
+substr key arg arg           //获取substring截取的内容
+ append key value           //字符串连接
+ keys pattern           //返回满足条件的所有key   ：keys *
+randomkey           //随机返回一个key
+ rename key newkey           //重命名key
+expire key seconds           //设置key的活动时间(s), expire 时间到期后,该k,v会删除
+ del key [key ...]           //删除
+
+
+
+
+
+
+
+
