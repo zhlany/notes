@@ -1,0 +1,52 @@
+多人协作开发
+数据备份
+版本分支
+权限管理
+历史记录
+
+多人开发，谁正在修改，谁正在提交，时时保持自己的代码是最新的
+
+代码的备份，历史代码的备份
+
+对历史版本形成一个按照
+满足了测试基线 质管部门
+
+git init --初始化
+
+创建全局用户
+
+创建项目用户
+项目用户优先级高于全局用户
+
+git config --global user.name "Username"
+git config --global user.email "Username@example.com"
+
+git status           查看状态
+git add .               将项目中未被跟踪的文件都加入到仓库中，
+git commit -m "Started project"       提交
+git log          查看提交历史
+git checkout .          撤销
+ git log --pretty=oneline         检查以前的提交
+rm -rf .git       删除仓库
+
+git reflog
+git reset -hard "daima"
+git log --oneline
+
+$ git branch v2  
+git chechout v2  //main-->v2
+
+
+文件上传：
+git remote add origin https:``//自己的仓库 url 地址
+git remote add origin https://github.com/IT-HUY/Repository_first.git  //创建新的github仓库
+
+需要先获取远端更新并与本地合并，再git push。
+git fetch origin   //获取远程更新
+git merge origin/master
+git push origin master  //上传到github
+ssh上传：
+ git push -u origin master 
+git@github.com:IT-HUY/Repository_first.git
+
+

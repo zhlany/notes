@@ -1,0 +1,2 @@
+Make主要使用在创建map,slice,channel等类型的实例。
+New 则主要创建struct的实例，没有数据类型，返回该实例的指针。

@@ -1,0 +1,12 @@
+所有的配置文件都在/etc/nginx下，
+并且每个虚拟主机已经安排在了/etc/nginx/sites-available下  
+程序文件在/usr/sbin/nginx  
+日志放在了/var/log/nginx中  
+并已经在/etc/init.d/下创建了启动脚本nginx  
+默认的虚拟主机的目录设置在了/var/www/nginx-default
+
+
+Nginx的配置文件是/etc/nginx/nginx.conf，其中设置了一些必要的参数，我们发现其中这样的语句：
+include /etc/nginx/sites-enabled/*
+
+可以看出/etc/nginx/sites-enabled/default文件也是一个核心的配置文件，其中包含了主要的配置信息，如服务器跟目录、服务器名称、location信息和server信息

@@ -1,0 +1,17 @@
+pwd  显示当前目录
+ls -a -l 显示当前目录下的文件
+vi 编辑文件文本
+cd 切换目录
+cat 显示文件所有内容
+touch 创建一个文件
+mkdir 创建一个目录
+mv 移动文件
+cp 拷贝
+rm 删除
+sudo root身份运行
+su root 更换root用户
+chmod 更改文件权限
+chown 更改文件所有者
+
+
+

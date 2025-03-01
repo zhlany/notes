@@ -1,0 +1,16 @@
+它是一个强大的分布式版本控制系统
+
+git status 查看当前状态
+git add 添加项目到仓库
+git commit -m "" 提交
+git log 查看历史提交
+git checkout 撤销 
+rm -rf .git 删除仓库
+
+git remote add origin "" 文件上传至远端仓
+git remote -v 查看远端仓库
+git remote add [name] [url] 添加远端仓库
+git remote rm 删除远端仓库
+
+
+git branch 查看本地分支

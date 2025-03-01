@@ -1,0 +1,7 @@
+1.参与超融合基础设施（HCI平台）虚拟网络设备接口开发和维护；
+
+2.参与云计算平台（SCP）微分布式防火墙的开发和维护；
+
+3.参与超融合基础设施（HCI平台）aNET网络虚拟化产品的补丁升级；
+Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/Windows-Containers/Main/helpful_tools/Install-DockerCE/install-docker-ce.ps1" -o install-docker-ce.ps1
+.\install-docker-ce.ps1
