@@ -1,0 +1,50 @@
+services:
+  zhl_mysql_service:
+    image: mysql:latest
+    container_name: zhl-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}  # 设置 MySQL root 用户的密码
+      - MYSQL_DATABASE=${MYSQL_DATABASE} # 创建一个名为 jxPro 的数据库
+      - MYSQL_USER=${MYSQL_USER}         # 创建一个新用户 pjx
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD} # 为 myuser 设置密码
+    volumes:
+      - mysql_data:/var/lib/mysql # 持久化数据存储
+    ports:
+      - "3307:3306"  # 将容器的3306端口映射到宿主机的3307端口
+    networks:
+      - my_network
+    restart: always
+
+  gin_jxpro_service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gin_image:latest  # 为 Gin 服务指定自定义的镜像名称
+    container_name: gin-jxpro
+    environment:
+      - CGO_ENABLED=${CGO_ENABLED}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+    volumes:
+      - .:/gin-jxpro
+    depends_on:
+      - zhl_mysql_service
+    ports:
+      - "3435:3435"
+    command: go run main.go
+    networks:
+      - my_network
+    restart: always
+
+
+
+networks:   # 确保它们在同一个 Docker 网络中，这样它们才能通过容器名称互相发现和通信
+  my_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+  ginPro-data:
