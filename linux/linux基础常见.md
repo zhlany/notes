@@ -20,7 +20,7 @@ shell会话永不退出
 //永不休眠
 vi /etc/profile
 TMOUT=0
-source /etc/proflie
+source /etc/profile
 
 //grep 添加颜色
 export GREP_OPTIONS="--color=auto"
