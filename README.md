@@ -8,4 +8,5 @@
 - [学习路线图](https://github.com/kamranahmedse/developer-roadmap)
 - [MCP合集](https://github.com/modelcontextprotocol/servers)
 - [常用的计算机知识PDF](https://github.com/0voice/learning_mind_map#)
-
+- [命令速查](https://wangchujiang.com/reference/)
+- [mermaid](https://modern-mermaid.live/?lang=zh-CN&theme=aurora&example=flowchart-login)
